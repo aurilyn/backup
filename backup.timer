@@ -2,7 +2,7 @@
 Description=Timer for backup-script, this should execute every friday at 01:00, if the machine is not on, this should execute next time the machine is booted if it is past Friday 01:00, if this service is on multiple servers, it won't execute all at once
 
 [Timer]
-OnCalendar=Sun 13:45:00
+OnCalendar=Fri 13:00:00
 Persistent=true
 
 [Install]
