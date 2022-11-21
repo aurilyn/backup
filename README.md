@@ -63,8 +63,13 @@ We want it to execute every Friday 01:00:00, so we will use
     [Timer]
     OnCalendar=Fri 13:00:00
     Persistent=true
+    RandomizedDelaySec=120
 ```
- to ensure that it will be ran the next time the machine is booted if it is off during the timer.
+ to ensure that it will be ran the next time the machine is booted if it is off during the timer. Additionally,
+ ```
+    RandomizedDelaySec=120
+ ```
+randomly delay the selected timer from 0 to 120seconds, this will prevent the service from being executed at the same time across the same server.
 
 Your timer file should look like this:
 ![Timer](./images/timer.png)
