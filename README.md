@@ -7,7 +7,7 @@ Using rsync we can pick the directory we would like to back up.
 The syntax follows as 
 
 ```
-	rsync [options] [src] [user@]host-ip:[destination]
+    rsync [options] [src] [user@]host-ip:[destination]
 ```
 
 This will allow you to copy files from the source directory, into the host-ip, then into
@@ -25,14 +25,14 @@ The type will be oneshot and it will execute from
  
 ```
     Type=oneshot
-	ExecStart=/opt/backup/backup-script
+    ExecStart=/opt/backup/backup-script
 ```
 
 Finally we will add in [Install], under install we will put in 
 	
 ```
     [Install]
-	WantedBy=multi.user.target
+    WantedBy=multi.user.target
 ```
 
 By the end, your file should resember something similar to this:
