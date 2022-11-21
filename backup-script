@@ -1,3 +1,7 @@
 #!/bin/bash
 
-rsync -aPv -e "ssh -i $HOME/.ssh/id_rsa" ./backup-files benny@164.92.115.237:TestDir/
+. ./backup-script.conf
+
+echo Backing up $DIR to $IPADD
+
+rsync -aPv -e "ssh -i $HOME/.ssh/id_rsa" $DIR $IPADD:TestDir/
