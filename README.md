@@ -19,6 +19,8 @@ To get the script to read a config file that contains all your variables, such a
     . ./backup-script.conf # this sources the config file
 ```
 
+Additionally, ensure that the .conf file is in the same directory as the script, otherwise it won't be able to read the conf file.
+
 With something resembling this inside the config file:
 
 ```
