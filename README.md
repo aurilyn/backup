@@ -13,8 +13,21 @@ The syntax follows as
 This will allow you to copy files from the source directory, into the host-ip, then into
 the specified directory in [destination]
 
+To get the script to read a config file that contains all your variables, such as directories to backup or the IP destination you would like to back up to, you source the file like so:
+
+```
+    . ./backup-script.conf # this sources the config file
+```
+
+With something resembling this inside the config file:
+
+```
+    IPADD=164.92.115.237
+    DIR="./backup-files ./randir"
+```
 Your script should look something similar to this, it will differ based on options you run:
 ![Script](./images/script.png)
+
 
 ### Creating service file
 
@@ -48,7 +61,7 @@ We want it to execute every Friday 01:00:00, so we will use
 
 ```
     [Timer]
-    OnCalendar=Fri 01:00:00
+    OnCalendar=Fri 13:00:00
     Persistent=true
 ```
  to ensure that it will be ran the next time the machine is booted if it is off during the timer.
