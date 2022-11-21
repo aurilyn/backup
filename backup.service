@@ -1,0 +1,9 @@
+[Unit]
+Description= using rsync to move files from one machine to another in order to backup files on the host machine
+
+[Service]
+Type=oneshot
+ExecStart=/opt/backup/backup
+
+[Install]
+WantedBy=multi-user.target

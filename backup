@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rsync -aPv -e "ssh -i $HOME/.ssh/id_rsa" ./backup-files benny@164.92.115.237:TestDir/
