@@ -5,3 +5,5 @@
 echo Backing up $DIR to $IPADD
 
 rsync -aPv -e "ssh -i $HOME/.ssh/id_rsa" $DIR $IPADD:TestDir/
+
+exit 0

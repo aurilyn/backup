@@ -3,7 +3,7 @@ Description= using rsync to move files from one machine to another in order to b
 
 [Service]
 Type=oneshot
-ExecStart=/opt/backup/backup
+ExecStart=/opt/backup/backup-script
 
 [Install]
 WantedBy=multi-user.target
